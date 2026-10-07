@@ -9,6 +9,7 @@ dependencies = [
     "jinja2>=3.1",
     "python-multipart>=0.0.20",
     "sqlalchemy>=2.0",
+    "pytest-playwright>=0.9.0",
 ]
 
 [project.optional-dependencies]
@@ -24,4 +25,9 @@ markers = [
     "unit: testes unitários",
     "integration: testes de integração",
     "e2e: testes end-to-end",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.10",
 ]
