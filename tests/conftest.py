@@ -3,7 +3,7 @@ from sqlalchemy import StaticPool, create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base, get_db
-
+from app.models import Aluno
 
 def pytest_collection_modifyitems(items):
     # Garante ordem pedagógica da pirâmide: unit -> integration -> e2e (ui).
@@ -56,5 +56,3 @@ def client(db_engine):
     with TestClient(app) as c:
         yield c
     app.dependency_overrides.clear()
-
-
